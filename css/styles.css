@@ -42,7 +42,7 @@ body {
 	margin: 0 auto;
 }
 
-.site-header {
+.header {
 	background-color: #fefefee5;
 	padding: 20px 0;
 	backdrop-filter: blur(16px);
@@ -51,30 +51,26 @@ body {
 	z-index: 1000;
 }
 
-.site-header__container {
+.header__container {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
 
-.site-logo__img {
+.header__logo-img {
 	display: block;
 }
 
-.sitenav {
+.nav {
 	display: flex;
 }
 
-.sitenav__list {
+.nav__list {
 	display: flex;
 	gap: 24px;
 }
 
-.responsive {
-	display: none;
-}
-
-.sitenav__link {
+.nav__link {
 	position: relative;
 	display: inline-block;
 	font-weight: 700;
@@ -84,7 +80,7 @@ body {
 	transition: color 0.3s ease;
 }
 
-.sitenav__link::after {
+.nav__link::after {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -97,16 +93,19 @@ body {
 	transition: transform 0.3s ease;
 }
 
-.sitenav__link:hover {
+.nav__link:hover {
 	color: var(--gray-color);
 }
 
-.sitenav__link:hover::after {
+.nav__link:hover::after {
 	transform: scaleX(1);
 }
 
-.sitenav__link:active {
+.nav__link:active {
 	opacity: 0.6;
+}
+
+.header__btn {
 }
 
 .btn {
@@ -152,7 +151,7 @@ body {
 	width: 100%;
 }
 
-.hero__inner {
+.hero__content {
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 40px;
@@ -175,14 +174,14 @@ body {
 	padding: 8px 16px;
 }
 
-/* Rasm qismi */
-.hero__img-wrapper {
+/* === Image === */
+.hero__image-wrapper {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.hero__img {
+.hero__image {
 	max-width: 100%;
 	height: auto;
 }
@@ -230,6 +229,12 @@ body {
 	padding-bottom: 40px;
 }
 
+.services__container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 16px;
+}
+
 .services__content {
 	display: flex;
 	align-items: flex-start;
@@ -255,9 +260,13 @@ body {
 	margin-bottom: 16px;
 }
 
-.services__badge svg {
+.services__badge img {
 	width: 16px;
 	height: 16px;
+}
+
+.services__badge-text {
+	font-weight: 500;
 }
 
 .services__title {
@@ -296,7 +305,8 @@ body {
 	background: #f2f2f7;
 	margin-right: 16px;
 }
-.services__icon svg {
+
+.services__icon img {
 	width: 24px;
 	height: 24px;
 }
@@ -311,13 +321,17 @@ body {
 
 .services__list {
 	color: #334155;
+	padding-left: 20px;
+	margin: 0;
 }
 
-.services__list li {
+.services__list-item {
 	margin-bottom: 7px;
+	list-style: none;
+	position: relative;
 }
 
-.services__list li::before {
+.services__list-item::before {
 	content: '';
 	display: inline-block;
 	width: 6px;
@@ -335,31 +349,36 @@ body {
 	padding-bottom: 6.4rem;
 }
 
+.qadriyat__container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 16px;
+}
+
 .qadriyat__top {
 	max-width: 236px;
 	width: 100%;
 	text-align: center;
-	margin-bottom: 64px;
-	margin-right: auto;
-	margin-left: auto;
+	margin: 0 auto 64px auto;
 }
 
 .qadriyat__top-list {
-	text-align: center;
+	display: inline-flex;
+	align-items: center;
 	gap: 8px;
 	padding: 12px 16px;
 	background-color: #f2f2f7;
 	border-radius: 8px;
 	margin-bottom: 16px;
-	display: inline-flex;
 }
 
 .qadriyat__top-item {
+	display: flex;
+	align-items: center;
 	font-weight: 400;
 	font-size: 1.6rem;
 	line-height: 2.4rem;
 	white-space: nowrap;
-	display: flex;
 }
 
 .qadriyat__top-item img {
@@ -385,9 +404,10 @@ body {
 
 .qadriyat__list {
 	display: flex;
-	align-items: center;
 	gap: 32px;
 	margin-bottom: 64px;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .qadriyat__item {
@@ -400,7 +420,7 @@ body {
 	text-align: start;
 }
 
-.qadriyat__item-img {
+.qadriyat__icon {
 	padding: 12px;
 	border-radius: 10px;
 	background-color: #f2f2f7;
@@ -429,119 +449,12 @@ body {
 
 .qadriyat__btn-wrapper {
 	display: flex;
-	align-items: center;
 	justify-content: center;
+	align-items: center;
 }
 
-/* super */
-
-.super {
-	padding-top: 64px;
-	padding-bottom: 64px;
-}
-
-#image-slider {
-	max-width: 1120px;
-	width: 100%;
-	margin: 0 auto;
-	padding: 2rem 1rem;
-}
-
-.splide__track {
-	max-width: 1200px;
-	width: 100%;
-}
-
-.splide__inner {
-	padding: 1.5rem;
-	border-radius: 2.4rem;
-	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-	border: 1px solid #e6ebf2;
-}
-
-.splide__arrow {
-	border: none;
-	background-color: #fff;
-	border: 1px solid #e2e8f0;
-	padding: 12px;
-	width: 40px;
-	height: 40px;
-}
-
-.splide__arrow--prev {
-	margin-left: -42px;
-}
-
-.splide__arrow--next {
-	margin-right: -52px;
-}
-
-.splide__list {
-	display: flex;
-	gap: 32px;
-}
-
-.splide__slide {
-	max-width: 512px;
-	width: 100%;
-	width: 512px;
-}
-
-.splide__img {
-	max-width: 100%;
-	height: auto;
-	border-radius: 0.5rem;
-	margin-bottom: 12px;
-}
-
-.splide__title {
-	font-size: 1.5rem;
-	font-weight: 600;
-	margin-bottom: 0.5rem;
-	color: #333;
-	font-weight: 590;
-	font-size: 24px;
-	line-height: 32px;
-	letter-spacing: -0.6%;
-}
-
-.splide__text {
-	font-size: 1rem;
-	line-height: 1.6;
-	color: #666;
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 28px;
-	letter-spacing: 0%;
-}
-
-.splide__inner {
-	border: none;
-	box-shadow: none;
-	padding: 0;
-}
-
-.site__top {
-	text-align: center;
-}
-
-.qadriyat__container {
-	text-align: center;
-}
-
-/* static */
-
-.statistics-section {
-	padding: 80px 0;
-}
-
-/* Section title */
-.section-title {
-	font-size: 32px;
-	font-weight: 700;
-	text-align: center;
-	color: #111827;
-	margin-bottom: 60px;
+.qadriyat__btn {
+	text-decoration: none;
 }
 
 /* Stats grid */

@@ -8,20 +8,16 @@ const btnLoader = document.getElementById('btnLoader');
 form.addEventListener('submit', e => {
 	e.preventDefault();
 
-	// Tugmada yuklanmoqda animatsiyasi
 	btnText.style.display = 'none';
 	btnLoader.style.display = 'inline';
 
 	fetch(scriptURL, { method: 'POST', body: new FormData(form) })
 		.then(response => {
-			// Formani tozalash
 			form.reset();
 
-			// Tugma holatini qayta tiklash
 			btnText.style.display = 'inline';
 			btnLoader.style.display = 'none';
 
-			// Xabar chiqarish (oddiy alert, xohlasangiz modal qilish mumkin)
 			alert("Ma'lumot muvaffaqiyatli yuborildi!");
 		})
 		.catch(error => {
