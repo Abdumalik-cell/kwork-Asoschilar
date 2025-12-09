@@ -6,6 +6,8 @@
 		<title>Asoschilar</title>
 
 		<link rel="icon" href="images/logo.svg" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
+
 		<!-- FONTS -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -325,79 +327,37 @@
 
 			<!-- supper -->
 
-			<section class="super">
-				<div class="container">
-					<div class="site__top">
-						<ul class="qadriyat__top-list">
-							<li class="qadriyat__top-item">
-								<img src="images/kubik.svg" alt="cup" />
-							</li>
-							<li class="qadriyat__top-item">
-								<p class="qadriyat__top-text natija">Natijalar gapiradi</p>
-							</li>
-						</ul>
-						<h3 class="qadriyat__top-title">Amalga oshirilgan loyihalar</h3>
+			<section hidden class="splide-section">
+				<div class="container splide-container">
+					<div class="splide-btn-wrapper">
+						<button class="splide-btn">
+							<img src="images/briefcase.svg" alt="img" />
+							Natijalar gapiradi
+						</button>
 					</div>
-					<div id="image-slider" class="splide">
+					<h3 class="splide-title">Amalga oshirilgan loyihalar</h3>
+
+					<div class="splide">
 						<div class="splide__track">
 							<ul class="splide__list">
 								<li class="splide__slide">
-									<div class="splide__inner">
-										<img class="splide__img" src="images/super.webp" alt="Supermiya logotipi" width="512" height="384" />
-										<h2 class="splide__title">Supermiya</h2>
-										<p class="splide__text">
-											Xotirani rivojlantirish markazi uchun ichki boshqaruv tartibiga tizim joriy etildi o‘tildi.
-										</p>
-									</div>
+									<img class="splide__img" src="images/nmadiri.webp" alt="Slide 1" />
+									<h3 class="splide-item-title">Supermiya</h3>
+									<p class="splide-item-text">
+										Xotirani rivojlantirish markazi uchun ichki boshqaruv tartibiga tizim joriy etildi.
+									</p>
 								</li>
-
 								<li class="splide__slide">
-									<div class="splide__inner">
-										<img class="splide__img" src="images/nmadiri.webp" alt="Print Well dizayn rasmi" />
-										<h2 class="splide__title">Print Well</h2>
-										<p class="splide__text">
-											Yirik tipografiya markazi. Reglamentsiz muhitdan to‘liq CRM va hisobotli tizimga o‘tildi.
-										</p>
-									</div>
+									<img
+										class="splide__img"
+										src="images/super.webp"
+										alt="Slide 2" />
+									<h3 class="splide-item-title">Print Well</h3>
+									<p class="splide-item-text">
+										Yirik tipografiya markazi. Rglamentsiz muhitdan to‘liq CRM va hisobotli tizimga o‘tildi.
+									</p>
 								</li>
 							</ul>
-						</div>
-
-						<div class="responsive">
-							<ul class="splide__list">
-								<li class="splide__slide">
-									<div class="splide__inner">
-										<img class="splide__img" src="images/super.webp" alt="Supermiya logotipi" width="512" height="384" />
-										<h2 class="splide__title">Supermiya</h2>
-										<p class="splide__text">
-											Xotirani rivojlantirish markazi uchun ichki boshqaruv tartibiga tizim joriy etildi o‘tildi.
-										</p>
-									</div>
-								</li>
-
-								<li class="splide__slide">
-									<div class="splide__inner">
-										<img class="splide__img" src="images/nmadiri.webp" alt="Print Well dizayn rasmi" />
-										<h2 class="splide__title">Print Well</h2>
-										<p class="splide__text">
-											Yirik tipografiya markazi. Reglamentsiz muhitdan to‘liq CRM va hisobotli tizimga o‘tildi.
-										</p>
-									</div>
-								</li>
-							</ul>
-							<div class="show-more-section nonne">
-								<a href="#konsultatsiya" class="show-more-btn" onclick="loadMoreTestimonials()">
-									Ko'proq ko'rish
-									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M4 6L8 10L12 6"
-											stroke="currentColor"
-											stroke-width="1.5"
-											stroke-linecap="round"
-											stroke-linejoin="round" />
-									</svg>
-								</a>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -647,6 +607,7 @@
 		</footer>
 
 		<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
 		<script src="js/main.js"></script>
 	</body>
 </html>
