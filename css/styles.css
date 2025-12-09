@@ -1806,3 +1806,188 @@ input::placeholder {
 		font-size: 20px;
 	}
 }
+@media screen and (max-width: 1171px) {
+	/* SECTION ASOSIY QISMI */
+	.splide-section {
+		/* Yuqori/pastki padding qisqartirildi */
+		padding-top: 48px;
+		padding-bottom: 48px;
+		background-image: url(../img/loyixa/bg-img.png);
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	.splide-container {
+		position: relative;
+	}
+
+	.splide {
+		/* Max-width bu yerda saqlab qolindi, ammo kontent kichrayadi */
+		max-width: 100%;
+		width: 100%;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	.splide__track {
+		/* Track o'lchami ham 100% ga o'zgartirildi */
+		max-width: 100%;
+		margin: 0 auto;
+	}
+
+	/* SLAYDER O'QLARI (ARROWS) */
+	.splide__arrow {
+		all: unset;
+		/* O'lchami kichraytirildi */
+		width: 32px;
+		height: 32px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: transparent;
+		border: 1px solid #e2e8f0;
+	}
+
+	.splide__arrow svg {
+		display: none;
+	}
+
+	.splide__list {
+		max-width: 100%;
+		margin: 0 auto;
+		display: flex;
+		/* Slaydlar orasidagi bo'shliq kamaytirildi */
+		gap: 16px;
+	}
+
+	/* SLAYD ELEMENTI ICHIDAGI KONTENT */
+	.splide__img {
+		/* Rasm o'lchami kichraytirildi */
+		margin-bottom: 8px;
+		width: 100%; /* Slayd ichida to'liq enni egallaydi */
+		height: 250px;
+		object-fit: cover; /* Rasm sig'ishi uchun qo'shildi */
+	}
+
+	.splide-item-title {
+		/* Sarlavha shrift o'lchami kichraytirildi */
+		font-size: 20px;
+		line-height: 28px;
+		margin-bottom: 4px; /* Margin kamaytirildi */
+	}
+
+	.splide-item-text {
+		/* Matn shrift o'lchami qoldirildi, chunki 16px o'qish uchun yaxshi */
+		font-size: 16px;
+		line-height: 24px;
+		color: #334155;
+	}
+
+	/* O'Q JOYLASHTIRISH (ARROW POSITION) */
+	.splide__arrows {
+		position: relative;
+	}
+
+	.splide__arrow--prev {
+		position: absolute;
+		left: 4px; /* Chetga yaqinlashtirildi */
+		top: 150px; /* Vertikal joylashuv o'zgartirildi */
+		background-image: url(../images/splide/arrow-left.svg);
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+
+	.splide__arrow--next {
+		position: absolute;
+		right: 4px; /* Chetga yaqinlashtirildi */
+		top: 150px; /* Vertikal joylashuv o'zgartirildi */
+		background-image: url(../images/splide/arrow-right.svg);
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+
+	/* TEPADAGI KNOPKA (BUTTON) */
+	.splide-btn-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 12px; /* Margin kamaytirildi */
+	}
+
+	.splide-btn {
+		padding: 6px 12px; /* Padding kamaytirildi */
+		font-size: 14px; /* Shrift o'lchami kamaytirildi */
+		line-height: 20px;
+	}
+
+	/* SECTION SARLAVHASI (TITLE) */
+	.splide-title {
+		/* Sarlavha shrift o'lchami kamaytirildi */
+		font-size: 26px;
+		line-height: 32px;
+		text-align: center;
+		/* Pastki margin kamaytirildi */
+		margin-bottom: 40px;
+	}
+
+	.splide__arrow {
+		cursor: pointer;
+	}
+}
+
+/* --- 768px va undan kichik ekranlar uchun optimallash --- */
+@media screen and (max-width: 768px) {
+	.splide-section {
+		/* Yuqori/pastki padding yana ham qisqartirildi */
+		padding-top: 32px;
+		padding-bottom: 32px;
+	}
+
+	.splide__track {
+		/* Track chetlari bo'shliqlar uchun padding qo'shildi */
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+
+	.splide__list {
+		/* Slaydlar orasidagi bo'shliq yanada kamaytirildi */
+		gap: 8px;
+	}
+
+	.splide-title {
+		/* Sarlavha shrifti telefon uchun kichraytirildi */
+		font-size: 22px;
+		line-height: 28px;
+		margin-bottom: 32px;
+	}
+
+	.splide__img {
+		/* Rasm balandligi telefon uchun kamaytirildi */
+		height: 180px;
+	}
+
+	.splide-item-title {
+		/* Element sarlavhasi shrifti kichraytirildi */
+		font-size: 18px;
+		line-height: 24px;
+		margin-bottom: 4px;
+	}
+
+	/* O'qlarni yashirish yoki kichraytirish tavsiya etiladi */
+	.splide__arrow {
+		display: none; /* Telefon ekranida o'qlarni yashirish */
+	}
+
+	/* Yoki, ularni juda kichraytirish va chetga joylash */
+	/*
+    .splide__arrow {
+        width: 24px;
+        height: 24px;
+        border: none;
+    }
+
+    .splide__arrow--prev { left: 4px; top: 100px; }
+    .splide__arrow--next { right: 4px; top: 100px; }
+    */
+}
