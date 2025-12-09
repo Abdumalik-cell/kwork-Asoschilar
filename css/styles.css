@@ -1013,6 +1013,10 @@ input::placeholder {
 	display: none;
 }
 
+.footer-left-img {
+	margin-bottom: auto;
+}
+
 /* ----------------------------- */
 /* Responsive Styles */
 /* ----------------------------- */
